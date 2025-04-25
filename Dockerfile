@@ -10,7 +10,6 @@ COPY . ./
 
 RUN npm run build
 
-# 2. Serve aşaması (build dosyalarını Nginx ile sunarız)
 FROM nginx:stable-alpine
 
 COPY --from=build /app/build /usr/share/nginx/html
