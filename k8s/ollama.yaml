@@ -71,5 +71,5 @@ spec:
   ports:
     - name: http
       port: 8000
-      targetPort: 11434 
+      targetPort: 11434  # BURASI ÖNEMLİ
   type: ClusterIP
