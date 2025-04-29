@@ -31,7 +31,7 @@ const ChatBot = () => {
       setAssistantMessage('');
 
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}`, {
+        const response = await fetch("/api/chat", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -84,8 +84,8 @@ const ChatBot = () => {
   };
 
   const resetChat = () => {
-    setMessages([]);  // Mesajları sıfırla
-    localStorage.removeItem('chatMessages');  // LocalStorage'ı sıfırla
+    setMessages([]);  
+    localStorage.removeItem('chatMessages');  
   };
 
   const displayedMessages = [
@@ -125,10 +125,13 @@ const ChatBot = () => {
       </button>
       </div>
 
-      {/* Sohbeti sıfırlama butonu */}
+    
 
     </div>
   );
 };
 
 export default ChatBot;
+
+
+
